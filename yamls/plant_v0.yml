@@ -1,0 +1,4 @@
+model:
+  name: plant
+  language: python
+  args: [../models/plant_v0.py, 0.0, 48.0, 6.0]

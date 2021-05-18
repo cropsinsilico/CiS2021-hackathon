@@ -1,0 +1,7 @@
+model:
+  name: light
+  language: fortran
+  args: ../models/light.f90
+  function: light
+  is_server: True
+  outputs: [intensity]

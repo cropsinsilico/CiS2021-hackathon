@@ -1,0 +1,6 @@
+model:
+  name: light
+  language: c++
+  args: ../models/light.cpp
+  function: light
+  is_server: True

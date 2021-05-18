@@ -1,0 +1,14 @@
+model:
+  name: plant2
+  language: python
+  args: [../models/plant_io_mesh.py, 0.0, 48.0, 6.0]
+  input: mesh
+  outputs:
+    - name: mesh
+      default_file:
+        name: ../output/mesh_%03d.obj
+        filetype: obj
+        is_series: True
+connections:
+  - input: plant:mesh
+    output: plant2:mesh

@@ -1,0 +1,13 @@
+models:
+  - name: roots
+    language: python
+    args: [../models/roots_v1.py, 0.0, 2.0, 0.5]
+    timesync: plant2root
+    outputs:
+      - name: mass
+        default_file:
+          name: ../output/mass.txt
+          filetype: table
+  - name: plant2root
+    language: timesync
+    aggregation: sum

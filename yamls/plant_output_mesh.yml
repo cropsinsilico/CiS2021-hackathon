@@ -1,0 +1,10 @@
+model:
+  name: plant
+  language: python
+  args: [../models/plant_output_mesh.py, 0.0, 48.0, 6.0]
+  outputs:
+    - name: mesh
+      default_file:
+        name: ../output/mesh_%03d.obj
+        filetype: obj
+        is_series: True

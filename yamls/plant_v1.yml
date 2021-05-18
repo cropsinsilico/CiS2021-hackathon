@@ -1,0 +1,11 @@
+model:
+  name: plant
+  language: python
+  args: [../models/plant_v1.py, 0.0, 48.0, 6.0]
+  client_of: light
+  outputs:
+    - name: light
+      default_file:
+        name: ../output/light_%03d.pkl
+        filetype: pickle
+        is_series: True

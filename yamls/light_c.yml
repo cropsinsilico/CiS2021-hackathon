@@ -1,0 +1,9 @@
+model:
+  name: light
+  language: c
+  args: ../models/light.c
+  function: light
+  is_server: True
+  outputs:
+    - name: output
+      vars: [intensity, length_intensity]

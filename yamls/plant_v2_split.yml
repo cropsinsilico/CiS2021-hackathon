@@ -1,0 +1,12 @@
+model:
+  name: plant
+  language: python
+  args: [../models/plant_v2_split.py, 0.0, 48.0, 6.0]
+  client_of: light
+  timesync: plant2root
+  outputs:
+    - name: light
+      default_file:
+        name: ../output/light_%03d.pkl
+        filetype: pickle
+        is_series: True

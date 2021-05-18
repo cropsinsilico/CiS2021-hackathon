@@ -1,0 +1,6 @@
+model:
+  name: light
+  language: python
+  args: ../models/light.py
+  function: light
+  is_server: True

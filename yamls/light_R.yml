@@ -1,0 +1,6 @@
+model:
+  name: light
+  language: R
+  args: ../models/light.R
+  function: light
+  is_server: True
