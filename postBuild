@@ -3,3 +3,4 @@ set -e
 yggconfig
 python -c "import yggdrasil"
 ygginfo
+yggcompile

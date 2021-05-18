@@ -1,0 +1,5 @@
+model:
+  name: light
+  language: R
+  args: ../models/light_v0.R
+  function: light

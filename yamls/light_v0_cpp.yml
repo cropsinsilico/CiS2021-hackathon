@@ -1,0 +1,5 @@
+model:
+  name: light
+  language: c++
+  args: ../models/light_v0.cpp
+  function: light

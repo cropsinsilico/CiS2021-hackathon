@@ -1,0 +1,5 @@
+model:
+  name: light
+  language: fortran
+  args: ../models/light_v0.f90
+  function: light
