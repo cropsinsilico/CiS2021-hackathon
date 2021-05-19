@@ -1,0 +1,4 @@
+model:
+  name: shoot
+  language: python
+  args: [../models/shoot_v0.py, 0.0, 48.0, 6.0]

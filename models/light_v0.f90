@@ -7,8 +7,8 @@
 !> @return intensity: Intensity of light in ergs cm^-2 s^-1.
 !---------------------------------------------------------------------------
 function light(doy, height) result(intensity)
-  real(kind=8), intent(in) :: doy
-  real(kind=8), intent(in) :: height
+  real(kind=8) :: doy
+  real(kind=8) :: height
   real(kind=8) :: intensity
   real, parameter :: Pi = 3.1415927
   

@@ -1,0 +1,9 @@
+model:
+  name: shoot
+  language: python
+  args: [../models/shoot_v1.py, 0.0, 48.0, 6.0]
+  outputs:
+    - name: height
+      default_file:
+        name: ../output/height.txt
+        filetype: table

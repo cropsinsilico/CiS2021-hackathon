@@ -1,0 +1,7 @@
+connections:
+  - input: shoot:height
+    output: light:input
+  - input: light:output
+    output:
+      name: ../output/light_v0.txt
+      filetype: table
