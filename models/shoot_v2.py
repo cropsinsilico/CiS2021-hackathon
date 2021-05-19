@@ -30,8 +30,8 @@ with_yggdrasil = os.environ.get('YGG_SUBPROCESS', False)
 # complete the connection defined in the YAML
 if with_yggdrasil:
     from yggdrasil import units
-    from yggdrasil.languages.Python.YggInterface import YggOutput
-    height_out = YggOutput('height')
+    from yggdrasil.languages.Python.YggInterface import YggRpcClient
+    light_rpc = YggRpcClient('light_shoot')
 
 # Continue simulation until time limit is reached
 while t <= tmax:
@@ -39,15 +39,23 @@ while t <= tmax:
     # If running as part an yggdrasil integration, send the time and
     # maximum height of the mesh to the height channel with units
     if with_yggdrasil:
-        flag = height_out.send(
+        flag, intensity = light_rpc.call(
             [units.add_units(t, 'days'),
              units.add_units(max(mesh.vertices[:, 2]), 'm')])
         if not flag:
-            raise Exception("Error sending height to output")
-    
-    # Compute the scale factor
-    # (pretend this is a biologically complex calculation)
-    scale = mass / 3.5e5
+            raise Exception("Error calling the light model.")
+
+        # Compute the scale factor using intensity, stripping units
+        # of the result to allow use with trimesh
+        # (pretend this is a biologically complex calculation)
+        scale = units.get_data(
+            units.add_units(mass, 'kg') *
+            units.add_units(2.0, 'erg/(cm**2*s*kg)') / intensity)
+        
+    else:
+        # Compute the scale factor
+        # (pretend this is a biologically complex calculation)
+        scale = mass / 3.5e5
 
     # Grow the shoot
     # (pretend this is a biologically complex calculation)

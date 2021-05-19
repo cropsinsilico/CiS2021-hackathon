@@ -25,10 +25,14 @@ i = 0
 # Continue simulation until time limit is reached
 while t <= tmax:
 
-    # Grow mesh
+    # Compute the scale factor
     # (pretend this is a biologically complex calculation)
-    scale = mass * t / 3.5e5
+    scale = mass / 3.5e5
+
+    # Grow the shoot
+    # (pretend this is a biologically complex calculation)
     mesh.vertices[:, 2] += mesh.vertices[:, 2] * scale
+    mass += mass * scale
 
     # Save mesh for this timestep
     filename_mesh = os.path.join(_dir, f'../output/mesh_{i:03d}.obj')

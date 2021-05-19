@@ -1,0 +1,5 @@
+model:
+  name: shoot
+  language: python
+  args: [../models/shoot_v2_copies.py, 0.0, 48.0, 6.0]
+  client_of: light

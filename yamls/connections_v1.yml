@@ -5,3 +5,4 @@ connections:
     output:
       name: ../output/light_v0.txt
       filetype: table
+      field_names: [intensity]
