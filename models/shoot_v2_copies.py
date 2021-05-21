@@ -65,7 +65,6 @@ while t <= tmax:
             intensity[iv] = v_intensity
         filename_light = os.path.join(_dir, f'../output/light_{i:03d}.pkl')
         with open(filename_light, 'wb') as fd:
-            print(filename_light, intensity)
             pickle.dump(intensity, fd)
 
         # Compute the scale factor using intensity, stripping units

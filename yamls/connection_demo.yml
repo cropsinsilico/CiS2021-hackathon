@@ -1,7 +1,0 @@
-connections:
-  - input: LightModel:light
-    output: GrowthModel:light
-  - input: growth_rate
-    output: ./Output/growth.txt
-    filetype: table
-    field_names: growth_rate

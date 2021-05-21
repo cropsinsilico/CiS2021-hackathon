@@ -1,0 +1,6 @@
+model:
+  name: shoot
+  language: python
+  args: [../models/shoot_v3.py, 0.0, 48.0, 6.0]
+  client_of: light
+  timesync: shoot2root

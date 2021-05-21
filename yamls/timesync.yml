@@ -1,0 +1,4 @@
+model:
+  name: shoot2root
+  language: timesync
+  aggregation: sum
