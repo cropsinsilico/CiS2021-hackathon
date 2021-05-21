@@ -29,6 +29,7 @@ with_yggdrasil = os.environ.get('YGG_SUBPROCESS', False)
 # the relevant yggdrasil routines and use the interface routine to
 # complete the connection defined in the YAML
 if with_yggdrasil:
+    import numpy as np
     import pickle
     from yggdrasil import units
     from yggdrasil.languages.Python.YggInterface import YggRpcClient
@@ -54,17 +55,18 @@ while t <= tmax:
         # Receive responses from the light model for each mesh vertex
         nvert = mesh.vertices.shape[0]
         intensity = np.zeros(nvert, 'f8')
-        for i in range(nvert):
+        for iv in range(nvert):
             flag, v_intensity = light_rpc.recv()
             if not flag:
                 raise Exception("Error receiving response from the light model.")
             if not units.has_units(intensity):
                 intensity = units.add_units(intensity,
                                             units.get_units(v_intensity))
-            intensity[i] = v_intensity
-            filename_light = os.path.join(_dir, f'../output/light_{i:03d}.pkl')
-            with open(filename_light, 'wb') as fd:
-                pickle.dump(intensity, fd)
+            intensity[iv] = v_intensity
+        filename_light = os.path.join(_dir, f'../output/light_{i:03d}.pkl')
+        with open(filename_light, 'wb') as fd:
+            print(filename_light, intensity)
+            pickle.dump(intensity, fd)
 
         # Compute the scale factor using intensity, stripping units
         # of the result to allow use with trimesh
