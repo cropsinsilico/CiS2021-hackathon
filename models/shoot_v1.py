@@ -40,14 +40,14 @@ while t <= tmax:
     # maximum height of the mesh to the height channel with units
     if with_yggdrasil:
         flag = height_out.send(
-            [units.add_units(t, 'days'),
+            [units.add_units(t, 'hrs'),
              units.add_units(max(mesh.vertices[:, 2]), 'm')])
         if not flag:
             raise Exception("Error sending height to output")
     
     # Compute the scale factor
     # (pretend this is a biologically complex calculation)
-    scale = mass / 3.5e5
+    scale = mass / 4.5e4
 
     # Grow the shoot
     # (pretend this is a biologically complex calculation)

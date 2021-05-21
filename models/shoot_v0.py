@@ -27,7 +27,7 @@ while t <= tmax:
 
     # Compute the scale factor
     # (pretend this is a biologically complex calculation)
-    scale = mass / 3.5e5
+    scale = mass / 4.5e4
 
     # Grow the shoot
     # (pretend this is a biologically complex calculation)

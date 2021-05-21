@@ -3,3 +3,18 @@ model:
   language: c++
   args: ../models/light_v0.cpp
   function: light
+  inputs:
+    - name: input
+      vars: [doy, height]
+      datatype:
+        type: array
+        items:
+          - type: float
+            units: day
+          - type: float
+            units: cm
+  output:
+    - name: output
+      datatype:
+        type: float
+        units: ergs/(cm**2*s)

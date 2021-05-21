@@ -40,7 +40,7 @@ while t <= tmax:
     # maximum height of the mesh to the height channel with units
     if with_yggdrasil:
         flag, intensity = light_rpc.call(
-            [units.add_units(t, 'days'),
+            [units.add_units(t, 'hrs'),
              units.add_units(max(mesh.vertices[:, 2]), 'm')])
         if not flag:
             raise Exception("Error calling the light model.")
@@ -49,13 +49,13 @@ while t <= tmax:
         # of the result to allow use with trimesh
         # (pretend this is a biologically complex calculation)
         scale = units.get_data(
-            units.add_units(mass, 'kg') *
-            units.add_units(2.0, 'erg/(cm**2*s*kg)') / intensity)
+            units.add_units(mass, 'g') * intensity /
+            units.add_units(4.0e10, 'g*erg/(cm**2*s)'))
         
     else:
         # Compute the scale factor
         # (pretend this is a biologically complex calculation)
-        scale = mass / 3.5e5
+        scale = mass / 4.5e4
 
     # Grow the shoot
     # (pretend this is a biologically complex calculation)
