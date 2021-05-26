@@ -2,7 +2,7 @@
 set -e
 mkdir output
 # yggconfig
-python -c "import yggdrasil"
+# python -c "import yggdrasil"
 # ygginfo
 # yggcompile
 # python -m yggdrasil info
