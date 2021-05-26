@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 mkdir output
-yggconfig
-python -c "import yggdrasil"
-ygginfo
-yggcompile
+# yggconfig
+# python -c "import yggdrasil"
+# ygginfo
+# yggcompile
 # python -m yggdrasil info
 # python -m yggdrasil compile-deps c cpp fortran
