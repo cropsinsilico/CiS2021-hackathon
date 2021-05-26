@@ -4,6 +4,7 @@ mkdir output
 yggconfig
 python -c "import yggdrasil"
 ygginfo
-yggcompile c cpp fortran
+echo $CONDA_PREFIX
+# yggcompile c cpp fortran
 # python -m yggdrasil info
 # python -m yggdrasil compile-deps c cpp fortran
