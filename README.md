@@ -9,7 +9,7 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 
 ### Requirements
 
-- Browser (tested on Google Chrome, Safari)
+- Browser (tested on Google Chrome, Safari, Firefox)
 - Github Account
 
 ### Preparing for the hackathon

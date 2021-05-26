@@ -5,4 +5,6 @@ python -c "import yggdrasil"
 # yggcompile
 python -m yggdrasil info
 python -m yggdrasil compile-deps c cpp fortran
+python -c "from yggdrasil import tools"
+python -c "from yggdrasil.runner import run"
 exec "$@"
