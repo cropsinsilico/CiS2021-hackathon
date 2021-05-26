@@ -2,6 +2,6 @@
 set -e
 mkdir output
 python -c "import yggdrasil"
-yggconfig
-ygginfo
-yggcompile
+# python -m yggdrasil config
+python -m yggdrasil info
+python -m yggdrasil compile-deps c cpp fortran
