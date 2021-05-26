@@ -3,8 +3,8 @@ set -e
 mkdir output
 yggconfig
 python -c "import yggdrasil"
-ygginfo
+ygginfo --verbose
 echo $CONDA_PREFIX
-# yggcompile c cpp fortran
+yggcompile c cpp fortran
 # python -m yggdrasil info
 # python -m yggdrasil compile-deps c cpp fortran
