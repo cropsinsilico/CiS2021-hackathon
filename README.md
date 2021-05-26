@@ -3,15 +3,21 @@ Materials for the Hackathon at the 2021 Crops in Silico Symposium &amp; Workshop
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD)
 
-## Requirements
+## Getting Started
 
-- Browser (tested on Google Chrome)
+All of the materials for the 2021 Crops in Silico Hackathon can be found in [this repository](https://github.com/cropsinsilico/CiS2021-hackathon).
+
+### Requirements
+
+- Browser (tested on Google Chrome, Safari)
 - Github Account
 
-## Preparing for the hackathon
+### Preparing for the hackathon
 
 - Check that you can sign-in to Github, creating an account as necessary. We will be using Github Issues to track problems encountered during the hackathon.
-- Try launching a mybinder instance by clicking on the icon above that says "launch binder". If you encounter an error, open an issue and try with another browser. If you still cannot launch the binder, follow the instruction below for downloading and installing the materials locally.
+- Try launching a mybinder instance by clicking on this [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD) icon (or the link below). It may take a few moments to initialize. If you encounter an error, open an issue and try with another browser. If you still cannot launch the binder, follow the instruction below for downloading and installing the materials locally.
+
+[https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD](https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD)
 
 ## Useful links
 
