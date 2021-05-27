@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+conda activate notebook
 export CONDA_PREFIX=/srv/conda/envs/notebook
 export PATH=$CONDA_PREFIX/bin:$PATH
 mkdir output

@@ -6,6 +6,7 @@ set -ex
 # yggcompile
 # python -m yggdrasil info
 # python -m yggdrasil compile-deps c cpp fortran
+yggconfig
 python -c "from yggdrasil import tools"
 python -c "from yggdrasil.runner import run"
 exec "$@"
