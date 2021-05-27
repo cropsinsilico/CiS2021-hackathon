@@ -2,6 +2,7 @@ name: CiS2021-hackathon-environment
 channels:
   - conda-forge
 dependencies:
+  - zeromq
   - yggdrasil
   - trimesh
   - networkx
