@@ -1,13 +1,12 @@
 #!/bin/bash
 set -e
 source /etc/profile.d/activate-conda.sh
-# conda activate notebook
-export CONDA_PREFIX=/srv/conda/envs/notebook
-export PATH=$CONDA_PREFIX/bin:$PATH
+# export CONDA_PREFIX=/srv/conda/envs/notebook
+# export PATH=$CONDA_PREFIX/bin:$PATH
 mkdir output
 yggconfig
 python -c "import yggdrasil"
 ygginfo --verbose
-# yggcompile c cpp fortran
+yggcompile c cpp fortran
 # python -m yggdrasil info
 # python -m yggdrasil compile-deps c cpp fortran
