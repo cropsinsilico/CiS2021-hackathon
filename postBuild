@@ -1,9 +1,11 @@
 #!/bin/bash
 set -e
+CONDA_SCRIPT=/etc/profile.d/activate-conda.sh
+if test -f "$CONDA_SCRIPT"; then
+    source $CONDA_SCRIPT
+fi
 mkdir output
 yggconfig
 python -c "import yggdrasil"
-ygginfo
-yggcompile
-# python -m yggdrasil info
-# python -m yggdrasil compile-deps c cpp fortran
+ygginfo --verbose
+# yggcompile c cpp fortran
