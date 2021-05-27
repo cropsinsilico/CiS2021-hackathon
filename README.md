@@ -24,7 +24,7 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 - [Hackathon Repository](https://github.com/cropsinsilico/CiS2021-hackathon)
 - [yggdrasil Repository](https://github.com/cropsinsilico/yggdrasil)
 - [yggdrasil Documentation](https://cropsinsilico.github.io/yggdrasil/index.html)
-- [Additional Examples](https://github.com/cropsinsilico/yggdrasil/tree/main/yggdrasil/examples)
+- [Additional Examples](https://cropsinsilico.github.io/yggdrasil/examples/examples_toc.html)
 - [Debugging Tips & Documented Errors](https://cropsinsilico.github.io/yggdrasil/debugging.html)
 
 ## Running Notebook Locally
