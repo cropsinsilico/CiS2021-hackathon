@@ -8,4 +8,4 @@ mkdir output
 yggconfig
 python -c "import yggdrasil"
 ygginfo --verbose
-yggcompile c cpp fortran
+# yggcompile c cpp fortran
