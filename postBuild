@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 export CONDA_PREFIX=/srv/conda/envs/notebook
+export PATH=$CONDA_PREFIX/bin:$PATH
 mkdir output
 yggconfig
 python -c "import yggdrasil"
