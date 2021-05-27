@@ -1,0 +1,4 @@
+#!/bin/bash
+set -ex
+yggcompile c cpp fortran
+exec "$@"
