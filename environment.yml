@@ -9,3 +9,4 @@ dependencies:
   - pygments
   - rise
   - jupyter_contrib_nbextensions
+  - ipykernel

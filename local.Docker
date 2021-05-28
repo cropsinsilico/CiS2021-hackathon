@@ -1,0 +1,38 @@
+FROM jupyter/minimal-notebook
+
+SHELL ["/bin/bash", "--login", "-c"]
+
+# Create output director
+RUN mkdir "output"
+
+# Create the environment:
+COPY environment.yml .
+RUN conda env create --file environment.yml
+
+# Make RUN commands use the new environment:
+RUN source /opt/conda/etc/profile.d/conda.sh && \
+    conda activate CiS2021-hackathon-environment && \
+    yggconfig && \
+    ygginfo --verbose && \
+    yggcompile c cpp fortran
+
+RUN echo "source activate CiS2021-hackathon-environment" > ~/.bashrc
+
+VOLUME /home/${NB_USER}/work
+
+# Copy the files
+WORKDIR /home/${NB_USER}/work
+COPY input /home/${NB_USER}/work/input
+COPY meshes /home/${NB_USER}/work/meshes
+COPY models /home/${NB_USER}/work/models
+COPY yamls /home/${NB_USER}/work/yamls
+COPY *.ipynb /home/${NB_USER}/work
+RUN mkdir "/home/${NB_USER}/work/output"
+RUN fix-permissions "/home/${NB_USER}/work/output" && fix-permissions "/home/${NB_USER}/work/models"
+COPY launch_local.sh .
+
+# /home/${NB_USER}/work
+
+
+EXPOSE 8888
+ENTRYPOINT ["/bin/bash", "launch_local.sh"]

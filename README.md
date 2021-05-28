@@ -15,7 +15,7 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 ### Preparing for the hackathon
 
 - Check that you can sign-in to Github, creating an account as necessary. We will be using Github Issues to track problems encountered during the hackathon.
-- Try launching a mybinder instance by clicking on this [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD) icon (or the link below). It may take a few moments to initialize. If you encounter an error, open an issue and try with another browser. If you still cannot launch the binder, follow the instruction [here](https://github.com/cropsinsilico/CiS2021-hackathon#running-notebook-locally) for downloading and installing the materials locally.
+- Try launching a mybinder instance by clicking on this [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD) icon (or the link below). It may take a few moments to initialize. If you encounter an error, open an issue and try with another browser. If you still cannot launch the binder, follow the instruction [here](https://github.com/cropsinsilico/CiS2021-hackathon#running-notebook-locally) for downloading and installing the materials locally or [here](https://github.com/cropsinsilico/CiS2021-hackathon#running-notebook-via-docker) for installing the docker image.
 
 [https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD](https://mybinder.org/v2/gh/cropsinsilico/CiS2021-hackathon/HEAD)
 
@@ -26,6 +26,10 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 - [yggdrasil Documentation](https://cropsinsilico.github.io/yggdrasil/index.html)
 - [Additional Examples](https://cropsinsilico.github.io/yggdrasil/examples/examples_toc.html)
 - [Debugging Tips & Documented Errors](https://cropsinsilico.github.io/yggdrasil/debugging.html)
+
+## Running Notebook via Docker
+
+If you have difficulties installing on your local machine due to conflicts or missing libraries, accessing the materials via docker may be a bit easier.
 
 ## Running Notebook Locally
 
@@ -71,6 +75,46 @@ call postBuild.bat
 
 ```
 jupyter notebook
+```
+
+### Install Docker
+
+Download and install docker from [here](https://docs.docker.com/get-docker/).
+
+### Sign up for DockerHub
+
+Sign up [here](https://hub.docker.com/) and sign-in to docker on your machine (either via the desktop app or [command line](https://docs.docker.com/engine/reference/commandline/login/)).
+
+### Pull the hackathon image
+
+Pull the [hackathon2021 image](https://hub.docker.com/r/langmm/hackathon2021) to your machine
+
+```
+docker pull langmm/hackathon2021
+```
+
+### Create a directory
+
+In order to be able to make modifications to the notebook and compile models, you will need to point the image to a directory it can use. You can create this directory anywhere that you have write access.
+
+```
+mkdir <some directory name>
+```
+
+### Start the notebook
+
+Run the command below, replacing `<some directory name>` with the full path to the directory you wish the image to use (Tip on Mac/Linux: If you create the directory in the present working directory you can use `$(pwd)/<some directory name>` to get the full path).
+
+```
+docker run -it --rm -p 8888:8888 -e NB_UID=$(id -u) --user root -v <some directory name>:/tmp langmm/hackathon2021:0.0.2
+```
+
+### Open the notebook
+
+Open the [notebook](http://localhost:8888/tree?) that is accessible via port 8888. You can also copy paste the link below into the browser of your choice.
+
+```
+http://localhost:8888/tree?
 ```
 
 References:
