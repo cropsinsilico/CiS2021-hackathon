@@ -2,8 +2,9 @@
 <!--- Provide some information about how you are accessing the hackathon materials. -->
 <!--- To mark a check box, replace the space inside the brackets with an X, e.g. [X] -->
 ## Context (Environment)
-* [ ] Via a MyBinder instance
-* [ ] Installed locally
+* [ ] MyBinder instance
+* [ ] Local install
+* [ ] Docker container
 
 <!--- What operating system are you on? (e.g. Windows, Mac, Linux) -->
 #### OS: 

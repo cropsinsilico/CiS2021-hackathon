@@ -27,10 +27,6 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 - [Additional Examples](https://cropsinsilico.github.io/yggdrasil/examples/examples_toc.html)
 - [Debugging Tips & Documented Errors](https://cropsinsilico.github.io/yggdrasil/debugging.html)
 
-## Running Notebook via Docker
-
-If you have difficulties installing on your local machine due to conflicts or missing libraries, accessing the materials via docker may be a bit easier.
-
 ## Running Notebook Locally
 
 ### Install Miniconda:
@@ -77,6 +73,10 @@ call postBuild.bat
 jupyter notebook
 ```
 
+## Running Notebook via Docker
+
+If you have difficulties installing on your local machine due to conflicts or missing libraries, accessing the materials via docker may be a bit easier.
+
 ### Install Docker
 
 Download and install docker from [here](https://docs.docker.com/get-docker/).
@@ -101,7 +101,7 @@ In order to be able to make modifications to the notebook and compile models, yo
 mkdir <some directory name>
 ```
 
-### Start the notebook
+### Start a container from the image
 
 Run the command below, replacing `<some directory name>` with the full path to the directory you wish the image to use (Tip on Mac/Linux: If you create the directory in the present working directory you can use `$(pwd)/<some directory name>` to get the full path).
 
@@ -111,7 +111,7 @@ docker run -it --rm -p 8888:8888 -e NB_UID=$(id -u) --user root -v <some directo
 
 ### Open the notebook
 
-Open the [notebook](http://localhost:8888/tree?) that is accessible via port 8888. You can also copy paste the link below into the browser of your choice.
+Open the [notebook](http://localhost:8888/tree?) that should now be accessible via port 8888. You can also copy paste the link below into the browser of your choice.
 
 ```
 http://localhost:8888/tree?
