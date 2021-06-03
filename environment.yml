@@ -2,11 +2,10 @@ name: CiS2021-hackathon-environment
 channels:
   - conda-forge
 dependencies:
-  - zeromq
-  - yggdrasil
+  - python=3.9
+  - yggdrasil=1.6.3
   - trimesh
   - networkx
   - pygments
-  - rise
-  - jupyter_contrib_nbextensions
+  - notebook
   - ipykernel
