@@ -34,11 +34,11 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 
 ## Debugging Tips
 
-#. If you are trying the MyBinder set up and are using a browser other than Mozilla Firefox, Google Chrome, or Safari, install one of those and try again.
-#. If it is an error in a notebook cell, try restarting and running all of the cells (in case previous cells were missed).
-#. Check for similar issues that have been reported as issues [here](https://github.com/cropsinsilico/CiS2021-hackathon/issues) including the issues that have been [closed](https://github.com/cropsinsilico/CiS2021-hackathon/issues?q=is%3Aissue+is%3Aclosed).
-#. If you are having issues with a local install, check [this page](https://cropsinsilico.github.io/yggdrasil/debugging.html) for known errors and their solutions.
-#. If your issue has not been reported, open a new one [here](https://github.com/cropsinsilico/CiS2021-hackathon/issues/new).
+1. If you are trying the MyBinder set up and are using a browser other than Mozilla Firefox, Google Chrome, or Safari, install one of those and try again.
+1. If it is an error in a notebook cell, try restarting and running all of the cells (in case previous cells were missed).
+1. Check for similar issues that have been reported as issues [here](https://github.com/cropsinsilico/CiS2021-hackathon/issues) including the issues that have been [closed](https://github.com/cropsinsilico/CiS2021-hackathon/issues?q=is%3Aissue+is%3Aclosed).
+1. If you are having issues with a local install, check [this page](https://cropsinsilico.github.io/yggdrasil/debugging.html) for known errors and their solutions.
+1. If your issue has not been reported, open a new one [here](https://github.com/cropsinsilico/CiS2021-hackathon/issues/new).
 
 ## References:
 
