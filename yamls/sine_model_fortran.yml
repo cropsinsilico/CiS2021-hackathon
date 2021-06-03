@@ -1,0 +1,5 @@
+model:
+  name: sine_model
+  language: fortran
+  args: ../models/sine_model.f90
+  function: call_sine

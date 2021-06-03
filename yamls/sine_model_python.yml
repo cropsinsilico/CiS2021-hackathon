@@ -1,0 +1,5 @@
+model:
+  name: sine_model
+  language: python
+  args: ../models/sine_model.py
+  function: call_sine
