@@ -26,6 +26,7 @@ COPY input /home/${NB_USER}/work/input
 COPY meshes /home/${NB_USER}/work/meshes
 COPY models /home/${NB_USER}/work/models
 COPY yamls /home/${NB_USER}/work/yamls
+COPY solutions /home/${NB_USER}/work/solutions
 COPY *.ipynb /home/${NB_USER}/work
 RUN mkdir "/home/${NB_USER}/work/output"
 RUN fix-permissions "/home/${NB_USER}/work/output" && fix-permissions "/home/${NB_USER}/work/models"

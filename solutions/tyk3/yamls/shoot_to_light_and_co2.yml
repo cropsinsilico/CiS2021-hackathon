@@ -1,0 +1,10 @@
+connections:
+  - input: shoot:height
+    outputs:
+      - light:input
+      - co2:height
+  - input: light:output
+    output:
+      name: ../output/light_v0.txt
+      filetype: table
+      field_names: [intensity]

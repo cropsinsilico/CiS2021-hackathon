@@ -1,0 +1,3 @@
+connections:
+  - input: shoot:height
+    output: co2:height

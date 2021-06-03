@@ -1,0 +1,19 @@
+model:
+  name: humidity
+  language: python
+  args: ../models/humidity.py
+  inputs:
+    - name: height
+      default_file:
+        name: ../input/height.txt
+        filetype: table
+    - name: co2
+      default_file:
+        name: ../input/co2.txt
+        filetype: table
+  outputs:
+    - name: humidity
+      default_file:
+        name: ../output/humidity.txt
+        filetype: table
+        field_names: [doy,height,co2,humidity]

@@ -1,0 +1,16 @@
+models:
+  - name: shoot
+    language: python
+    args: [../models/shoot_calling_light_calling_weather.py, 0.0, 48.0, 6.0]
+    client_of: light
+  - name: light
+    language: python
+    args: ../models/light_calling_weather.py
+    function: light
+    client_of: weather
+    is_server: true
+  - name: weather
+    language: python
+    args: ../models/weather.py
+    function: temp
+    is_server: true

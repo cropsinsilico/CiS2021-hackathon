@@ -1,0 +1,5 @@
+model:
+  name: microbe
+  language: python
+  args: [../models/microbe.py, 0.0, 2880.0, 60.0]
+  timesync: shoot2root

@@ -1,5 +1,6 @@
 # Output directory
 output/
+hidden/
 
 # Emacs fiels
 *~

@@ -1,0 +1,15 @@
+model:
+  name: reflectance
+  language: python
+  args: [../models/reflectance.py, 5.0, 23.0, 126.0]
+  inputs:
+    - name: temperature
+      default_file:
+        name: ../input/temp.txt
+        filetype: table
+        as_array: true
+  outputs:
+    - name: reflectance
+      default_file:
+        name: ../output/reflectance.txt
+        filetype: table

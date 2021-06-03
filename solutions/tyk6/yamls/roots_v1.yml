@@ -1,0 +1,5 @@
+model:
+  name: roots
+  language: python
+  args: [../models/roots_v1.py, 0.0, 2.0, 0.5]
+  timesync: shoot2root

@@ -1,0 +1,18 @@
+model:
+  name: weather
+  language: python
+  args: ../models/weather.py
+  function: temp
+  
+connections:
+  - input:
+      name: ../input/light_v0.txt
+      filetype: table
+    output: light:input
+  - input: light:output
+    output: weather:input
+  - input: weather:output
+    output:
+      name: ../output/temp.txt
+      filetype: table
+      field_names: [temp]

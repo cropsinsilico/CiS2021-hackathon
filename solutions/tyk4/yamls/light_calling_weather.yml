@@ -1,0 +1,22 @@
+models:
+  - name: light
+    language: python
+    args: ../models/light_calling_weather.py
+    function: light
+    client_of: weather
+    inputs:
+      name: input
+      default_file:
+        name: ../input/height.txt
+        filetype: table
+    outputs:
+      name: output
+      default_file:
+        name: ../output/light_and_weather.txt
+        filetype: table
+        field_names: [intensity,temperature]
+  - name: weather
+    language: python
+    args: ../models/weather.py
+    function: temp
+    is_server: true

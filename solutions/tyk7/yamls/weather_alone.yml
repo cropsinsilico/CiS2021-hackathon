@@ -1,0 +1,5 @@
+model:
+  name: weather
+  language: python
+  args: ../models/weather.py
+  function: temp
