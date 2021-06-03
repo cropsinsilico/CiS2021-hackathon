@@ -1,0 +1,6 @@
+model:
+  name: roots
+  language: make
+  target: roots_v1
+  args: [../models/roots_v1.c, 0.0, 2.0, 0.5]
+  timesync: shoot2root
