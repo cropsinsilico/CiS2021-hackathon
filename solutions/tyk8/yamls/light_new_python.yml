@@ -1,0 +1,5 @@
+model:
+  name: light_new
+  language: python
+  args: ../models/light_new.py
+  function: light

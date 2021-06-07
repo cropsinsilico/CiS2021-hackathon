@@ -53,6 +53,11 @@ files = {
         (os.path.join(solutions_dir, 'tyk2/models/co2.py'),
          os.path.join(solutions_dir, 'tyk7/models/co2.py')),
     ],
+    'tyk8': [
+        'models/light_v0.py',
+        'yamls/light_v0_python.yml',
+        'input/light_v0.txt',
+    ],
 }
 
 

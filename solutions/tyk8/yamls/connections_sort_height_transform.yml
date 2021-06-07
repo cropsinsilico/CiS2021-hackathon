@@ -1,0 +1,20 @@
+connections:
+  - input:
+      name: ../input/light_v0.txt
+      filetype: table
+    outputs:
+      - name: light:input
+        filter:
+          statement: "%x%[0] > 2"
+      - name: light_new:input
+        filter:
+          statement: "%x%[0] <= 2"
+  - inputs:
+      - light:output
+      - name: light_new:output
+        transform:
+          statement: "2*%x%"
+    output:
+      name: ../output/light_multi_model_transform.txt
+      filetype: table
+      field_names: [intensity]

@@ -1,7 +1,6 @@
 import os
 from yggdrasil import import_as_function
 from yggdrasil import tools, units
-from yggdrasil.runner import run
 if not os.path.isdir('output'):
     os.mkdir('output')
 

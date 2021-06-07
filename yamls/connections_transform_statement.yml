@@ -1,0 +1,12 @@
+connections:
+  - input:
+      name: ../input/light_v0.txt
+      filetype: table
+    output: light:input
+  - input: light:output
+    output:
+      transform:
+        statement: "%x%*2"
+      name: ../output/light_transform_statement.txt
+      filetype: table
+      field_names: [intensity]

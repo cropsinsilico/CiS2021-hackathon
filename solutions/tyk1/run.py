@@ -7,5 +7,5 @@ if not os.path.isdir('output'):
 # Part 1: YAML
 tools.display_source('yamls/weather.yml', number_lines=True)
 
-# Part 2: run
+# Part 2: Run
 run(['yamls/weather.yml'], production_run=True)

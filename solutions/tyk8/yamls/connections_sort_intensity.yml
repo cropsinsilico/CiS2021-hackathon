@@ -1,0 +1,17 @@
+connections:
+  - input:
+      name: ../input/light_v0.txt
+      filetype: table
+    output: light:input
+  - input: light:output
+    outputs:
+      - filter:
+          statement: "%x% < 400"
+        name: ../output/light_filter_lt400.txt
+        filetype: table
+        field_names: [intensity]
+      - filter:
+          statement: "%x% >= 400"
+        name: ../output/light_filter_ge400.txt
+        filetype: table
+        field_names: [intensity]
