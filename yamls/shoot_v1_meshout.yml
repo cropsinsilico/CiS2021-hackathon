@@ -1,0 +1,14 @@
+model:
+  name: shoot
+  language: python
+  args: [../models/shoot_v1_meshout.py, 0.0, 48.0, 6.0]
+  outputs:
+    - name: height
+      default_file:
+        name: ../output/height.txt
+        filetype: table
+    - name: mesh
+      default_file:
+        name: ../output/mesh_%03d.obj
+        filetype: obj
+        is_series: true
