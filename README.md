@@ -5,7 +5,7 @@ Materials for the Hackathon at the 2021 Crops in Silico Symposium &amp; Workshop
 
 ## Getting Started
 
-All of the materials for the 2021 Crops in Silico Hackathon can be found in [this repository](https://github.com/cropsinsilico/CiS2021-hackathon).
+All of the materials for the 2021 Crops in Silico Hackathon can be found in [this repository](https://github.com/cropsinsilico/CiS2021-hackathon). A recording of the hackathon can be found [here](https://uofi.app.box.com/s/kjhahvhvp9dss7u75wycxh7vymnlqirr).
 
 ### Requirements
 
@@ -31,6 +31,7 @@ All of the materials for the 2021 Crops in Silico Hackathon can be found in [thi
 - [yggdrasil Documentation](https://cropsinsilico.github.io/yggdrasil/index.html)
 - [Additional Examples](https://cropsinsilico.github.io/yggdrasil/examples/examples_toc.html)
 - [Debugging Tips & Documented Errors](https://cropsinsilico.github.io/yggdrasil/debugging.html)
+- [Hackathon Recording](https://uofi.app.box.com/s/kjhahvhvp9dss7u75wycxh7vymnlqirr)
 
 ## Debugging Tips
 
